@@ -7,6 +7,7 @@ enableEmoji = true
 googleAnalytics = ""
 disqusShortname = ""
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
+copyright = "&copy; 2017 Ajay Mehta"
 
 [permalinks]
     post = "/:year/:month/:day/:slug/"
@@ -14,19 +15,20 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 [[menu.main]]
     name = "About"
     url = "/about/"
+    weight = 1
 [[menu.main]]
     name = "GitHub"
-    url = "https://github.com/rstudio/blogdown"
-
+    url = "https://github.com/ajaykmehta"
+    weight = 2
 
 [params]
-    description = "A website built through Hugo and blogdown."
+    description = "Personal website of Ajay Mehta."
 
     # options for highlight.js (version, additional languages, and theme)
     highlightjsVersion = "9.12.0"
     highlightjsCDN = "//cdnjs.cloudflare.com/ajax/libs"
-    highlightjsLang = ["r", "yaml"]
-    highlightjsTheme = "github"
+    highlightjsLang = ["r", "yaml", "tex", "haskell", "xml", "sql", "stan", "python", "powershell", "go", "excel", "cs", "css", "cpp"]
+    highlightjsTheme = "atelier-dune-dark"
 
     MathJaxCDN = "//cdnjs.cloudflare.com/ajax/libs"
     MathJaxVersion = "2.7.5"
