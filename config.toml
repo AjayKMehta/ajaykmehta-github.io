@@ -7,7 +7,7 @@ enableEmoji = true
 googleAnalytics = ""
 disqusShortname = ""
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
-copyright = "&copy; 2017 Ajay Mehta"
+copyright = "&copy; 2020 Ajay Mehta"
 
 [permalinks]
     post = "/:year/:month/:day/:slug/"
