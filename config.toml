@@ -1,13 +1,29 @@
-
 baseurl = "/"
 languageCode = "en-us"
-title = "A Hugo website"
-theme = "hugo-lithium"
+title = "Ajay's blog"
+theme = "beautifulhugo"
 enableEmoji = true
 googleAnalytics = ""
 disqusShortname = ""
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 copyright = "&copy; 2020 Ajay Mehta"
+enableGitInfo = true
+math = true
+
+[privacy]
+    [privacy.disqus]
+        disable = true
+    [privacy.googleAnalytics]
+        disable = true
+    [privacy.instagram]
+        disable = true
+    [privacy.twitter]
+        disable = true
+    [privacy.vimeo]
+        disable = true
+    [privacy.youtube]
+        disable = true
+
 
 [permalinks]
     post = "/:year/:month/:day/:slug/"
@@ -16,31 +32,36 @@ copyright = "&copy; 2020 Ajay Mehta"
     name = "About"
     url = "/about/"
     weight = 1
-[[menu.main]]
-    name = "GitHub"
-    url = "https://github.com/ajaykmehta"
-    weight = 2
 
 [params]
     description = "Personal website of Ajay Mehta."
-
     # options for highlight.js (version, additional languages, and theme)
     highlightjsVersion = "9.12.0"
     highlightjsCDN = "//cdnjs.cloudflare.com/ajax/libs"
-    highlightjsLang = ["r", "yaml", "tex", "haskell", "xml", "sql", "stan", "python", "powershell", "go", "excel", "cs", "css", "cpp"]
+    highlightjsLang = [
+        "r",
+        "yaml",
+        "tex",
+        "haskell",
+        "xml",
+        "sql",
+        "stan",
+        "python",
+        "powershell",
+        "go",
+        "excel",
+        "cs",
+        "css",
+        "cpp"
+    ]
     highlightjsTheme = "atelier-dune-dark"
-
     MathJaxCDN = "//cdnjs.cloudflare.com/ajax/libs"
     MathJaxVersion = "2.7.5"
 
+    logo = "img/dolphins_20140914.jpg"
     # path to the favicon, under "static"
-    favicon = "favicon.ico"
-
+    favicon = "img/favicon.ico"
+    dateFormat = "January 2, 2006"
     AuthorName = "Ajay Mehta"
     GitHubUser = "ajaykmehta"
-
-    [params.logo]
-    url = "logo.png"
-    width = 50
-    height = 50
-    alt = "Logo"
+    commit = "https://github.com/ajaykmehta/blog/tree/"
