@@ -1,3 +1,7 @@
+#################################
+## Hugo settings               ##
+#################################
+
 baseurl = "/"
 languageCode = "en-us"
 title = "Ajay's blog"
@@ -33,28 +37,18 @@ math = true
     url = "/about/"
     weight = 1
 
+#################################
+## Theme-specific settings     ##
+#################################
+
+#################
+# beautifulhugo #
+#################
+
 [params]
+    homeTitle = "" # Set a different text for the header on the home page
     description = "Personal website of Ajay Mehta."
-    # options for highlight.js (version, additional languages, and theme)
-    highlightjsVersion = "9.12.0"
-    highlightjsCDN = "//cdnjs.cloudflare.com/ajax/libs"
-    highlightjsLang = [
-        "r",
-        "yaml",
-        "tex",
-        "haskell",
-        "xml",
-        "sql",
-        "stan",
-        "python",
-        "powershell",
-        "go",
-        "excel",
-        "cs",
-        "css",
-        "cpp"
-    ]
-    highlightjsTheme = "atelier-dune-dark"
+    useHLJS = false
     MathJaxCDN = "//cdnjs.cloudflare.com/ajax/libs"
     MathJaxVersion = "2.7.5"
 
@@ -62,6 +56,19 @@ math = true
     # path to the favicon, under "static"
     favicon = "img/favicon.ico"
     dateFormat = "January 2, 2006"
-    AuthorName = "Ajay Mehta"
-    GitHubUser = "ajaykmehta"
     commit = "https://github.com/ajaykmehta/blog/tree/"
+    rss = true
+    comments = false
+    readingTime = true
+    wordCount = false
+    socialShare = false
+    showRelatedPosts = true
+    hideAuthor = false
+
+[Author]
+    name = "Ajay Mehta"
+    # website = "https://ajaymehta.netlify.com"
+    github = "ajaykmehta"
+    gitlab = "ajaymehta1"
+    linkedin = "ajay-mehta-b781ba1"
+    # stackoverflow = ""
