@@ -2,7 +2,7 @@
 ## Hugo settings               ##
 #################################
 
-baseurl = "/"
+baseurl = "https://ajaymehta.netlify.com/"
 languageCode = "en-us"
 title = "Ajay's blog"
 theme = "beautifulhugo"
@@ -10,7 +10,6 @@ enableEmoji = true
 googleAnalytics = ""
 disqusShortname = ""
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
-copyright = "&copy; 2020 Ajay Mehta"
 enableGitInfo = true
 math = true
 
@@ -19,15 +18,20 @@ math = true
         disable = true
     [privacy.googleAnalytics]
         disable = true
+        respectDoNotTrack = true
+        useSessionStorage = true
     [privacy.instagram]
         disable = true
     [privacy.twitter]
-        disable = true
+        disable = false
+        enableDNT = true
+        simple = false
     [privacy.vimeo]
-        disable = true
+        disable = false
+        simple = false
     [privacy.youtube]
-        disable = true
-
+        disable = false
+        privacyEnhanced = true
 
 [permalinks]
     post = "/:year/:month/:day/:slug/"
@@ -58,12 +62,16 @@ math = true
     dateFormat = "January 2, 2006"
     commit = "https://github.com/ajaykmehta/blog/tree/"
     rss = true
-    comments = false
+    comments = true
     readingTime = true
     wordCount = false
-    socialShare = false
+    socialShare = true
     showRelatedPosts = true
     hideAuthor = false
+    # These settings are for utterances. Affect customized single page template.
+    repo = "ajaykmehta/blog"
+    # dark-blue,github-dark-orange,github-dark,github-light,icy-dark,photon-dark
+    commentsTheme = "github-light"
 
 [Author]
     name = "Ajay Mehta"
