@@ -1,5 +1,5 @@
 # https://alison.rbind.io/post/2019-02-19-hugo-netlify-toml/
-[build] 
+[build]
   publish = "public"
   command = "hugo"
 
@@ -7,7 +7,7 @@
   HUGO_VERSION = "0.62.1"
   HUGO_ENV = "production"
   HUGO_ENABLEGITINFO = "true"
-  
+
 [context.branch-deploy.environment]
   HUGO_VERSION = "0.62.1"
 

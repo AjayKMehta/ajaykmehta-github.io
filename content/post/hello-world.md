@@ -6,7 +6,12 @@ draft: true
 date: 2020-01-08T20:31:04-08:00
 ---
 
+
+# Header
+
 This is a test.
+
+## Haskell
 
 ```haskell
 m >>= f
@@ -16,9 +21,22 @@ foldl _ z [] = z
 foldl f z (x:xs) = foldl f (f z x) xs
 ```
 
+## C#
+
 ```csharp
 var x = new List<string>();
 ```
+
+## Python
+
+```python
+import numpy as np
+import pandas as pd
+
+[x^2 for x in range(10)]
+```
+
+## R
 
 ```r
 iris %>%
@@ -29,15 +47,26 @@ summarize(
 )
 ```
 
+## PowerShell
+
 ```powershell
 Get-Module -ListAvailable | group Name | ? Count -gt 1
 ```
 
-```python
-import numpy as np
-import pandas as pd
-```
+## Math
 
 $$\alpha = \frac{1}{3}$$
 
+## Emoji
+
 :smile:
+
+## Shortcodes
+
+### Built-in
+
+{{< youtube w7Ft2ymGmfc >}}
+
+### Custom
+
+The year `{{`**`< year >`**`}}` is `{{< year >}}`.

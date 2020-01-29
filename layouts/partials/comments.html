@@ -1,0 +1,5 @@
+{{ if (.Params.comments) | or (and (or (not (isset .Params "comments")) (eq .Params.comments nil)) (.Site.Params.comments)) }}
+    <script src="https://utteranc.es/client.js" repo="{{ .Site.Params.repo }}" issue-term="url" label="comments :speech_balloon:"
+        theme="{{ .Site.Params.commentsTheme }}" crossorigin="anonymous" async>
+        </script>
+{{end}}
