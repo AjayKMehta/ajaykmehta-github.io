@@ -9,7 +9,7 @@ date: 2020-01-08T20:31:04-08:00
 
 # Header
 
-This is a test.
+This is a test[^1].
 
 ## Haskell
 
@@ -70,3 +70,5 @@ $$\alpha = \frac{1}{3}$$
 ### Custom
 
 The year `{{`**`< year >`**`}}` is `{{< year >}}`.
+
+[^1]: Footnotes work.
