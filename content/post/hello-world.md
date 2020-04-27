@@ -13,15 +13,15 @@ This is a test[^1].
 
 ## Haskell
 
-```haskell
+{{< highlight haskell "linenos=table, hl_lines=1 3-4" >}}
 m >>= f
 
 foldl :: (a -> b -> a) -> a -> [b] -> a
 foldl _ z [] = z
 foldl f z (x:xs) = foldl f (f z x) xs
-```
+{{< /highlight >}}
 
-## C#
+## C\#
 
 ```csharp
 var x = new List<string>();
@@ -29,7 +29,7 @@ var x = new List<string>();
 
 ## Python
 
-```python
+```python {linenos=table, hl_lines=["1-2", 4]}
 import numpy as np
 import pandas as pd
 
@@ -50,12 +50,17 @@ summarize(
 ## PowerShell
 
 ```powershell
-Get-Module -ListAvailable | group Name | ? Count -gt 1
+Get-Module -ListAvailable |
+    group Name |
+    ? Count -gt 1
 ```
 
 ## Math
 
+`\tag{1}`  does not work.
+
 $$\alpha = \frac{1}{3}$$
+
 
 ## Emoji
 
@@ -70,5 +75,15 @@ $$\alpha = \frac{1}{3}$$
 ### Custom
 
 The year `{{`**`< year >`**`}}` is `{{< year >}}`.
+
+### Github-flavored Markdown
+
+<kbd>W</kbd>
+
+```diff
+10 PRINT "BASIC IS COOL"
+- 20 GOTO 11
++ 20 GOTO 10
+```
 
 [^1]: Footnotes work.
