@@ -10,11 +10,11 @@ This post is to test various features of Hugo.
 
 <!--more-->
 
-# Header
+## Syntax highlighting
 
 This is a test[^1].
 
-## Haskell
+### Haskell
 
 {{< highlight haskell "linenos=table, hl_lines=1 3-4" >}}
 m >>= f
@@ -24,13 +24,13 @@ foldl _ z [] = z
 foldl f z (x:xs) = foldl f (f z x) xs
 {{< /highlight >}}
 
-## C\#
+### C\#
 
 ```csharp
 var x = new List<string>();
 ```
 
-## Python
+### Python
 
 ```python {linenos=table, hl_lines=["1-2", 4]}
 import numpy as np
@@ -39,9 +39,9 @@ import pandas as pd
 [x^2 for x in range(10)]
 ```
 
-## R
+### R
 
-```r
+```r {hl_lines = [1, 3]}
 iris %>%
 group_by(Species) %>%
 summarize(
@@ -50,7 +50,7 @@ summarize(
 )
 ```
 
-## PowerShell
+### PowerShell
 
 ```powershell
 Get-Module -ListAvailable |
@@ -113,7 +113,7 @@ This is column 2.
 
 The year `{{`**`< year >`**`}}` is `{{< year >}}`.
 
-### Github-flavored Markdown
+## GitHub-flavored Markdown
 
 <kbd>W</kbd>
 
