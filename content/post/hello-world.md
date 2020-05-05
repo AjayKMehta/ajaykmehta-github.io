@@ -64,7 +64,6 @@ Get-Module -ListAvailable |
 
 $$\alpha = \frac{1}{3}$$
 
-
 ## Emoji
 
 :smile:
@@ -74,6 +73,28 @@ $$\alpha = \frac{1}{3}$$
 ### Built-in
 
 {{< youtube w7Ft2ymGmfc >}}
+
+### Beautiful Hugo
+
+There are two extra shortcodes provided (along with the customized figure shortcode).
+
+#### Details
+
+This simply adds the html5 detail attribute, supported on all *modern* browsers. Use it like this:
+
+{{% details "This is the details title (click to expand)" %}}
+This is the content (**hidden until clicked**).
+{{% /details %}}
+
+#### Split
+
+This adds a two column side-by-side environment (will turn into 1 col for narrow devices):
+
+{{< columns >}}
+This is column 1.
+{{< column >}}
+This is column 2.
+{{< endcolumns >}}
 
 ### Custom
 

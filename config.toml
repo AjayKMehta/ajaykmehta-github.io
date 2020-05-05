@@ -15,6 +15,7 @@ enableGitInfo = true
 enableInlineShortcodes = true
 math = true
 footnoteReturnLinkContents = "↩"
+metaDataFormat = "yaml"
 
 [markup]
   [markup.goldmark]
