@@ -9,7 +9,7 @@
   HUGO_ENABLEGITINFO = "true"
 
 [context.dev]
-  command = "hugo -D"
+  command = "hugo -D -b https://dev--ajaymehta.netlify.app/"
 
 [context.branch-deploy.environment]
   HUGO_VERSION = "0.69.2"
