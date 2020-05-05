@@ -1,0 +1,84 @@
+---
+title: "RMarkdown Template"
+author: "Ajay Mehta"
+date: '2020-05-03'
+description: Template for Rmarkdown
+draft: yes
+highlight: pygments
+slug: test-rmd
+compact-title: no
+---
+
+This is a R Markdown template for a blog post.
+<!-- https://gohugo.io/content-management/summaries/ -->
+<!--more-->
+
+```{r setup, include=FALSE}
+options(warnPartialMatchArgs = FALSE, warnPartialMatchDollar = FALSE)
+
+knitr::opts_chunk$set(
+  class.output = "bg-success",
+  class.message = "bg-info text-info",
+  class.warning = "bg-warning text-warning",
+  class.error = "bg-danger text-danger"
+)
+
+library(flair)
+```
+
+# Section heading in sentence case
+
+Citation of a website[^1].
+
+## Subsection heading
+
+`r blogdown::shortcode("figure", src = "https://res.cloudinary.com/dtbudl0yx/image/fetch/w_2000,f_auto,q_auto,c_fit/https://adamtheautomator.com/content/images/size/w2000/2020/01/cat-2934720_1280.jpg",
+  width = "400", alt = "this is the alternative text" 
+)`
+
+```{r, eval=TRUE}
+blogdown::shortcode("youtube", "CjTLN-FXiFA")
+```
+
+A plot:
+
+```{r my-plot}
+plot(1:10)
+```
+
+Code chunk:
+
+```{r}
+rnorm(10) %>% sum()
+```
+
+**Embed a tweet** by using a Hugo shortcode:
+
+<!--html_preserve-->
+{{< tweet 1138216112808529920 >}}
+<!--/html_preserve-->
+
+```{r test, include=FALSE}
+a <- 1
+a <- 1
+a <- 1
+a <- 1
+a <- 1
+a <- 1
+a <- 1
+```
+
+$\overset{f(a)}{a \in \mathbb{R}}$
+
+```{r flair-ex, echo = FALSE}
+decorate("test") %>%
+  flair("<-")
+```
+
+$$\begin{align}
+y_t & = l_{t-1} + \phi{b_{t-1}} + \epsilon_t \\
+l_t & = l_{t-1} + \phi{b_{t-1}} + \alpha\epsilon_t \\
+b_t & = \phi{b_{t-1}} + \beta\epsilon_t
+\end{align}$$
+
+[^1]: Hugo static site generator. https://gohugo.io/
