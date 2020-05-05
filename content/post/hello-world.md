@@ -6,6 +6,9 @@ draft: true
 date: 2020-01-08T20:31:04-08:00
 ---
 
+This post is to test various features of Hugo.
+
+<!--more-->
 
 # Header
 
