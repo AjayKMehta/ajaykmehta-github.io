@@ -4,7 +4,8 @@ author: "Ajay Mehta"
 date: '2020-05-03'
 description: Template for Rmarkdown
 draft: yes
-highlight: pygments
+categories: ["R", "testing"]
+tags: []
 slug: test-rmd
 compact-title: no
 ---
@@ -41,6 +42,7 @@ plot(1:10)
 Code chunk:
 
 ```{r}
+library(tidyverse)
 rnorm(10) %>% sum()
 ```
 
@@ -55,7 +57,7 @@ a <- 1
 a <- 1
 ```
 
-$\overset{f(a)}{a \in \mathbb{R}}$
+This is a test: $\overset{f(a)}{a \in \mathbb{R}}$
 
 ```{r flair-ex, echo = FALSE}
 decorate("test") %>%
