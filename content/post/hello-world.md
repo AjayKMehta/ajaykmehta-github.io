@@ -60,9 +60,22 @@ Get-Module -ListAvailable |
 
 ## Math
 
-`\tag{1}`  does not work.
+> :bulb: **Prefix `$$` with `` ` ``.**
 
-$$\alpha = \frac{1}{3}$$
+`\tag{1}`  does not work unless you do this:
+
+```text
+`$$\tag{1}\alpha = \frac{1}{3}$$`
+```
+
+`$$\tag{1}\alpha = \frac{1}{3}$$`
+
+`$$\begin{align}
+B := \left\{\frac{\bar{y}_i-\bar{y}_j}{\underline{x}_i-\underline{x}_j}:(i,j) \in D^2\ and\ \underline{x}_i \gt \underline{x}_j\ and\ \bar{y}_i \gt \bar{y}_j\right\} \cup \\
+\left\{\frac{\underline{y}_i-\underline{y}_j}{\underline{x}_i-\underline{x}_j}:(i,j) \in D^2\ and\ \underline{x}_i \gt \underline{x}_j\ and\ \underline{y}_i \lt \underline{y}_j\right\} \cup \\
+\left\{\frac{\bar{y}_i-\bar{y}_j}{\bar{x}_i-\bar{x}_j}:(i,j) \in D^2\ and\ \bar{x}_i \gt \bar{x}_j\ and\ \bar{y}_i \lt \bar{y}_j\right\} \cup \\
+\left\{\frac{\underline{y}_i-\underline{y}_j}{\bar{x}_i-\bar{x}_j}:(i,j) \in D^2\ and\ \bar{x}_i \gt \bar{x}_j\ and\ \underline{y}_i \gt \underline{y}_j\right\} \cup \{0\}
+\end{align}$$`
 
 ## Emoji
 
