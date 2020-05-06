@@ -1,0 +1,28 @@
+---
+title: '{{ .File.TranslationBaseName | replaceRE "-" " " | title }}'
+slug: '{{ .File.TranslationBaseName }}'
+date: '{{now.Format "2006-01-02"}}'
+author: "Ajay Mehta"
+description:
+summary:
+draft: true
+categories: ["R"]
+tags: []
+compact-title: no
+---
+
+<!--more-->
+
+```{r setup, include=FALSE}
+options(warnPartialMatchArgs = FALSE, warnPartialMatchDollar = FALSE)
+
+knitr::opts_chunk$set(
+  class.output = "bg-success",
+  class.message = "bg-info text-info",
+  class.warning = "bg-warning text-warning",
+  class.error = "bg-danger text-danger"
+)
+
+library(magrittr)
+library(flair)
+```
