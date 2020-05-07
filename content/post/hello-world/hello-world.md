@@ -4,6 +4,8 @@ slug: "hello-world"
 author: "Ajay Mehta"
 draft: true
 date: 2020-01-08T20:31:04-08:00
+categories: ["testing"]
+tags: []
 ---
 
 This post is to test various features of Hugo.
