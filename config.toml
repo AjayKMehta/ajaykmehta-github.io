@@ -9,7 +9,8 @@ theme = "beautifulhugo"
 enableEmoji = true
 googleAnalytics = ""
 disqusShortname = ""
-ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
+# https://ropensci.org/technotes/2020/04/23/rmd-learnings
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$", "index\\.html"]
 enableGitInfo = true
 # https://gohugo.io/templates/shortcode-templates/#inline-shortcodes
 enableInlineShortcodes = true
