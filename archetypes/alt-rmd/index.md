@@ -1,6 +1,6 @@
 ---
-title: '{{ .File.ContentBaseName | replaceRE "-" " " | title }}'
-slug: '{{ .File.ContentBaseName }}'
+title: '{{ replace .Name "-" " " | title }}'
+slug: '{{ .Name }}'
 date: '{{now.Format "2006-01-02"}}'
 author: "Ajay Mehta"
 description:
