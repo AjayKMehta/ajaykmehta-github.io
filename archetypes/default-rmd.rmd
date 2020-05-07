@@ -4,13 +4,16 @@ slug: '{{ .File.TranslationBaseName }}'
 date: '{{now.Format "2006-01-02"}}'
 author: "Ajay Mehta"
 description:
-summary:
+summary: "Enter summary here or use text before <!--more-->."
 draft: true
 categories: ["R"]
 tags: []
 compact-title: no
 ---
 
+This is the RMarkdown (.Rmd) template for a blog post.
+
+**Add summary here or remove line below.**
 <!--more-->
 
 ```{r setup, include=FALSE}
