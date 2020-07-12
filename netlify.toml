@@ -4,7 +4,7 @@
   command = "hugo"
 
 [context.production.environment]
-  HUGO_VERSION = "0.71.0"
+  HUGO_VERSION = "0.73.0"
   HUGO_ENV = "production"
   HUGO_ENABLEGITINFO = "true"
 
@@ -12,7 +12,7 @@
   command = "hugo -D -b https://dev--ajaymehta.netlify.app/"
 
 [context.branch-deploy.environment]
-  HUGO_VERSION = "0.71.0"
+  HUGO_VERSION = "0.73.0"
 
 [context.deploy-preview.environment]
-  HUGO_VERSION = "0.71.0"
+  HUGO_VERSION = "0.73.0"
