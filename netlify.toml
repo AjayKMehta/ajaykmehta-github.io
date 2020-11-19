@@ -16,3 +16,10 @@
 
 [context.deploy-preview.environment]
   HUGO_VERSION = "0.73.0"
+
+# https://drmowinckels.io/blog/2020-05-25-changing-you-blogdown-workflow/
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+

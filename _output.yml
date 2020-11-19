@@ -3,3 +3,4 @@ blogdown::html_page:
   fig_width: 6
   dev: "svg"
   compact-title: false
+  highlight: tango
