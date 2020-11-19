@@ -26,6 +26,55 @@ knitr::opts_chunk$set(
   class.error = "bg-danger text-danger"
 )
 
+# https://bookdown.org/yihui/rmarkdown-cookbook/font-color.html
+colorize <- function(x, color) {
+  if (knitr::is_latex_output()) {
+    sprintf("\\textcolor{%s}{%s}", color, x)
+  } else if (knitr::is_html_output()) {
+    sprintf("<span style='color: %s;'>%s</span>", color,
+      x)
+  } else x
+}
+
+# Based on https://bookdown.org/yihui/rmarkdown-cookbook/hook-html5.html
+plot_output <- knitr::knit_hooks$get("plot")
+
+# Use `fig.html=TRUE` to use `figure` tag instead of `img`
+if (knitr::is_html_output()) {
+  knitr::knit_hooks$set(
+    plot = function(x, options) {
+      if (isTRUE(options$fig.html)) {
+        cap <- options$fig.cap # figure caption
+        tags <- htmltools::tags
+        as.character(tags$figure(
+          tags$img(src = x, alt = cap),
+          tags$figcaption(cap)
+        ))
+      } else {
+        plot_output(x, options)
+      }
+    }
+  )
+}
+
+# Use out.lines chunk option to truncate output.
+
+# save the built-in output hook
+hook_output <- knitr::knit_hooks$get("output")
+
+# set a new output hook to truncate text output
+knitr::knit_hooks$set(output = function(x, options) {
+  if (!is.null(n <- options$out.lines)) {
+    x <- xfun::split_lines(x)
+    if (length(x) > n) {
+      # truncate the output
+      x <- c(head(x, n), "....\n")
+    }
+    x <- paste(x, collapse = "\n")
+  }
+  hook_output(x, options)
+})
+
 library(magrittr)
 library(flair)
 ```
