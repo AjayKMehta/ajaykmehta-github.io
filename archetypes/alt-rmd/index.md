@@ -15,7 +15,6 @@ output:
 ---
 
 This is a special RMarkdown (.Rmd) template for a blog post used in a page bundle with support for Hugo features.
-You should change the generated file's extension to .Rmd and knit this document.
 
 **Add summary here or remove line below.**
 <!--more-->
