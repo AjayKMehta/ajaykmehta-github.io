@@ -3,20 +3,24 @@
 #################################
 
 baseurl = "https://ajaymehta.netlify.com/"
+defaultContentLanguage = "en"
 languageCode = "en-us"
 title = "Ajay's blog"
 theme = "beautifulhugo"
 enableEmoji = true
 googleAnalytics = ""
-disqusShortname = ""
-# https://ropensci.org/technotes/2020/04/23/rmd-learnings
-ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$", "index\\.html"]
+# https://cran.r-project.org/web/packages/blogdown/news/news.html
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_cache$", "index\\.html", "\\.knit\\.md$", "\\.utf8\\.md$"]
 enableGitInfo = true
 # https://gohugo.io/templates/shortcode-templates/#inline-shortcodes
 enableInlineShortcodes = true
-math = true
 footnoteReturnLinkContents = "↩"
 metaDataFormat = "yaml"
+
+[imaging]
+  resampleFilter = "lanczos"
+  quality = 90
+  anchor = "smart"  # Anchor for cropping. Options include Smart and Center.
 
 [markup]
   [markup.goldmark]
@@ -61,21 +65,22 @@ metaDataFormat = "yaml"
 [[menu.main]]
     identifier = "about"
     name = "About"
-    pre = "<i class='far fa-address-card'></i>"
+    pre = "<span class='glyphicon glyphicon-info-sign fa-2x'></span>"
     url = "about/"
     weight = -100
 
 [[menu.main]]
-    name = "Categories"
-    pre = "<i class='fas fa-star'></i>"
-    url = "categories"
+    name = "Tags"
+    pre = "<span class='glyphicon glyphicon-tags fa-2x'></span>"
+    url = "tags"
     weight = 3
 
 [[menu.main]]
-    name = "Tags"
-    pre = "<i class='fas fa-sticky-note'></i>"
-    url = "tags"
-    weight = 3
+    name = "Categories"
+    # pre = "<span style='font-size: 20px' class='glyphicon glyphicon-th-list'></span>"
+    pre = "<span class='glyphicon glyphicon-th-list fa-2x'></span>"
+    url = "categories"
+    weight = 4
 
 
 #################################
