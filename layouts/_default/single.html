@@ -3,12 +3,7 @@
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <article role="main" class="blog-post">
-                {{ with .Content }}
-                <div>
-                    {{/* https://discourse.gohugo.io/t/adding-anchor-next-to-headers/1726/9  */}}
-                    {{ . | replaceRE "(<h[1-9] id=\"([^\"]+)\".+)(</h[1-9]+>)" `${1}<a href="#${2}" class="hanchor" ariaLabel="Anchor"> 🔗&#xFE0E;</a> ${3}` | safeHTML }}
-                </div>
-                {{ end }}
+                {{.Content }}
 
                 {{ if .Params.tags }}
                 <div class="blog-tags">

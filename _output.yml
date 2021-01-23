@@ -1,5 +1,6 @@
 blogdown::html_page:
-  toc: true
+  toc: false
   fig_width: 6
-  number_sections: true
   dev: "svg"
+  compact-title: false
+  highlight: tango

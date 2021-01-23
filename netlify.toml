@@ -4,12 +4,21 @@
   command = "hugo"
 
 [context.production.environment]
-  HUGO_VERSION = "0.69.2"
+  HUGO_VERSION = "0.80.0"
   HUGO_ENV = "production"
   HUGO_ENABLEGITINFO = "true"
 
+[context.dev]
+  command = "hugo -D -b https://dev--ajaymehta.netlify.app/"
+
 [context.branch-deploy.environment]
-  HUGO_VERSION = "0.69.2"
+  HUGO_VERSION = "0.80.0"
 
 [context.deploy-preview.environment]
-  HUGO_VERSION = "0.69.2"
+  HUGO_VERSION = "0.80.0"
+
+# https://drmowinckels.io/blog/2020-05-25-changing-you-blogdown-workflow/
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
