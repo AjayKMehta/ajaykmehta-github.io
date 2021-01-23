@@ -9,6 +9,16 @@ draft: true
 categories: ["R"]
 tags: []
 compact-title: no
+hljs: true
+params:
+  # theme: atom-one-dark
+  theme: ""
+output:
+  html_page:
+    keep_md: false
+editor_options:
+  markdown:
+    doctype: blogdown    
 ---
 
 This is the RMarkdown (.Rmd) template for a blog post.
@@ -19,12 +29,14 @@ This is the RMarkdown (.Rmd) template for a blog post.
 ```{r setup, include=FALSE}
 options(warnPartialMatchArgs = FALSE, warnPartialMatchDollar = FALSE)
 
-knitr::opts_chunk$set(
-  class.output = "bg-success",
-  class.message = "bg-info text-info",
-  class.warning = "bg-warning text-warning",
-  class.error = "bg-danger text-danger"
-)
+if (!("theme" %in% names(params)) || nchar(params$theme) == 0) {
+  knitr::opts_chunk$set(
+    class.output = "bg-success",
+    class.message = "bg-info text-info",
+    class.warning = "bg-warning text-warning",
+    class.error = "bg-danger text-danger"
+  )
+}
 
 # https://bookdown.org/yihui/rmarkdown-cookbook/font-color.html
 colorize <- function(x, color) {

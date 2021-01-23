@@ -8,6 +8,9 @@ summary: "Enter summary here or use text before <!--more-->."
 draft: true
 categories: []
 tags: []
+editor_options:
+  markdown:
+    doctype: hugo
 ---
 
 This is the Markdown (.md) template for a blog post.

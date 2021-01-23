@@ -12,6 +12,9 @@ compact-title: no
 output:
   html_document:
     keep_md: true
+editor_options:
+  markdown:
+    doctype: hugo
 ---
 
 This is a special RMarkdown (.Rmd) template for a blog post used in a page bundle with support for Hugo features.
