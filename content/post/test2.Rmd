@@ -1,5 +1,5 @@
 ---
-title: "RMarkdown Template"
+title: "Test post"
 author: "Ajay Mehta"
 date: '2020-05-03'
 description: Template for Rmarkdown
@@ -8,21 +8,34 @@ categories: ["R", "testing"]
 tags: []
 slug: test-rmd
 compact-title: no
+hljs: true
+params:
+  theme: ""
+output:
+  html_page:
+    keep_md: false
+editor_options:
+  markdown:
+    doctype: blogdown    
 ---
 
 This is a R Markdown template for a blog post.
+
 <!-- https://gohugo.io/content-management/summaries/ -->
+
 <!--more-->
 
 ```{r setup, include=FALSE}
 options(warnPartialMatchArgs = FALSE, warnPartialMatchDollar = FALSE)
 
-knitr::opts_chunk$set(
-  class.output = "bg-success",
-  class.message = "bg-info text-info",
-  class.warning = "bg-warning text-warning",
-  class.error = "bg-danger text-danger"
-)
+if (!("theme" %in% names(params)) || nchar(params$theme) == 0) {
+  knitr::opts_chunk$set(
+    class.output = "bg-success",
+    class.message = "bg-info text-info",
+    class.warning = "bg-warning text-warning",
+    class.error = "bg-danger text-danger"
+  )
+}
 
 library(flair)
 ```
@@ -41,11 +54,10 @@ plot(1:10)
 
 Code chunk:
 
-```{r}
+```{r message=FALSE}
 library(tidyverse)
 rnorm(10) %>% sum()
 ```
-
 
 ```{r test, include=FALSE}
 a <- 1
@@ -59,7 +71,8 @@ a <- 1
 
 This is a test: $\overset{f(a)}{a \in \mathbb{R}}$
 
-```{r flair-ex, echo = FALSE}
+
+```{r flair-ex, echo = FALSE, warning=FALSE}
 decorate("test") %>%
   flair("<-")
 ```
