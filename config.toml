@@ -10,7 +10,7 @@ theme = "beautifulhugo"
 enableEmoji = true
 googleAnalytics = ""
 # https://cran.r-project.org/web/packages/blogdown/news/news.html
-ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_cache$", "index\\.html", "\\.knit\\.md$", "\\.utf8\\.md$"]
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_cache$", "index\\.html", "\\.knit\\.md$", "\\.utf8\\.md$", "scripts"]
 enableGitInfo = true
 # https://gohugo.io/templates/shortcode-templates/#inline-shortcodes
 enableInlineShortcodes = true
