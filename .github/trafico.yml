@@ -1,8 +1,11 @@
+# https://github.com/orhan/trafico
+
 # Add WIP labels for PRs that are set to be work-in-progress, no other label will be added.
 addWipLabel: true
 
 # Configuration for labels, set ignore to true to skip adding label
 labels:
+  # Adds a WIP label if title starts with 'WIP', '[WIP]' or 'WIP:'
   wip:
     name: "🚧 WIP"
     color: "#FBCA04"

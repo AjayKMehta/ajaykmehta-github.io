@@ -18,3 +18,13 @@
 <script async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
+{{/* https://github.com/yihui/hugo-xmin/pull/5/files */}}
+{{ if .Page.Params.hljs }}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.0/languages/r.min.js"></script>
+
+<script>
+    hljs.configure({ languages: [] });
+    hljs.initHighlightingOnLoad();
+</script>
+{{ end }}

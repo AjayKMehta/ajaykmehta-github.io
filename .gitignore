@@ -38,7 +38,8 @@ vignettes/*.pdf
 # R Environment Variables
 .Renviron
 
-public/
+public
+resources
 .DS_Store
 Thumbs.db
 ideas.txt
