@@ -1,8 +1,7 @@
 name: merge pull-request
 on:
-    pull_request:
-        types:
-            - labeled
+    pull_request
+
 jobs:
     merge:
         runs-on: ubuntu-latest
