@@ -96,7 +96,7 @@ metaDataFormat = "yaml"
     description = "Personal website of Ajay Mehta."
     useHLJS = false
     MathJaxCDN = "//cdnjs.cloudflare.com/ajax/libs"
-    MathJaxVersion = "2.7.5"
+    MathJaxVersion = "3.1.2"
 
     logo = "img/dolphins_20140914.png"
     # path to the favicon, under "static"

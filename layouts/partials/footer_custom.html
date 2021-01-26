@@ -20,8 +20,9 @@
 
 {{/* https://github.com/yihui/hugo-xmin/pull/5/files */}}
 {{ if .Page.Params.hljs }}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.0/highlight.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.0/languages/r.min.js"></script>
+{{/* https://cdnjs.com/libraries/highlight.js */}}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/r.min.js"></script>
 
 <script>
     hljs.configure({ languages: [] });
