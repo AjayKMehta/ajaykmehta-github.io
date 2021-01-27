@@ -1,9 +1,14 @@
+
+# Try merging a pull request when it is approved.
 name: merge pull-request
 on:
-    pull_request
+    pull_request_review:
+        types:
+            - submitted
 
 jobs:
-    merge:
+    automerge:
+        if: github.event.review.state == 'approved' || !github.event.review
         runs-on: ubuntu-latest
         steps:
             - name: merge pull request
