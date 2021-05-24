@@ -16,6 +16,7 @@ enableGitInfo = true
 enableInlineShortcodes = true
 footnoteReturnLinkContents = "↩"
 metaDataFormat = "yaml"
+copyright: '© Ajay Mehta (2021)'
 
 [imaging]
   resampleFilter = "lanczos"
