@@ -25,6 +25,8 @@
 
 # Web
 *.css text diff=css
+*.scss text diff=css
+*.sass text
 *.htm text diff=html
 *.html text diff=html
 *.md text diff=markdown
