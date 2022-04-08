@@ -3,6 +3,10 @@ on:
     branches:
     - master
 
+permissions:
+  contents: read
+  pull-requests: write
+
 jobs:
   triage:
     runs-on: ubuntu-latest

@@ -6,6 +6,10 @@ on:
         types:
             - submitted
 
+permissions:
+    contents: read
+    pull-requests: write
+
 jobs:
     automerge:
         if: github.event.review.state == 'approved' || !github.event.review
