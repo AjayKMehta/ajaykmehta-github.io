@@ -15,6 +15,7 @@ jobs:
     create_issue_branch_job:
         name: "create issue branch"
         runs-on: ubuntu-latest
+        timeout-minutes: 5
         steps:
             - name: "Create Issue Branch"
               uses: robvanderleek/create-issue-branch@master

@@ -1,4 +1,3 @@
-
 # Try merging a pull request when it is approved.
 name: merge pull-request
 on:
@@ -14,6 +13,7 @@ jobs:
     automerge:
         if: github.event.review.state == 'approved' || !github.event.review
         runs-on: ubuntu-latest
+        timeout-minutes: 5
         steps:
             - name: merge pull request
               uses: sudo-bot/action-pull-request-merge@v1.1.1
