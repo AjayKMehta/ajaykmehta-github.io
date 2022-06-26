@@ -16,7 +16,7 @@ enableGitInfo = true
 enableInlineShortcodes = true
 footnoteReturnLinkContents = "↩"
 metaDataFormat = "yaml"
-copyright: '© Ajay Mehta (2021)'
+copyright = '© Ajay Mehta (2022)'
 
 [imaging]
   resampleFilter = "lanczos"
@@ -97,7 +97,7 @@ copyright: '© Ajay Mehta (2021)'
     description = "Personal website of Ajay Mehta."
     useHLJS = false
     MathJaxCDN = "//cdnjs.cloudflare.com/ajax/libs"
-    MathJaxVersion = "3.1.2"
+    MathJaxVersion = "3.2.1"
 
     logo = "img/dolphins_20140914.png"
     # path to the favicon, under "static"

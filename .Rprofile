@@ -22,5 +22,5 @@ options(
   blogdown.yaml.empty = TRUE,
   # New in 1.2
   blogdown.knit.serve_site = FALSE,
-  blogdown.markdown.format = c('gfm', '+footnotes', '+tex_math_dollars', '+smart')
+  blogdown.markdown.format = c("gfm", "+footnotes", "+tex_math_dollars", "+smart")
 )
