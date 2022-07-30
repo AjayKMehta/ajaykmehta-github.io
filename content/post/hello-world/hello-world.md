@@ -126,3 +126,7 @@ The year `{{`**`< year >`**`}}` is `{{< year >}}`.
 ```
 
 [^1]: Footnotes work.
+
+## Markdown attributes {.text-serif #a-heading title="Hovered"}
+
+Hugo 0.81 introduced attribute lists on markdown blocks like lists, tables etc in which the element's attributes would be defined in curly braces.

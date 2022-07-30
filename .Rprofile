@@ -19,5 +19,9 @@ options(
   # Protect LaTeX expressions in a pair of backticks when the post output
   # format is Markdown
   blogdown.protect.math = TRUE,
-  blogdown.yaml.empty = TRUE
+  blogdown.yaml.empty = TRUE,
+  # New in 1.2
+  blogdown.knit.serve_site = FALSE,
+  blogdown.markdown.format =
+    c("gfm", "+footnotes", "+tex_math_dollars", "+smart", "+emoji")
 )

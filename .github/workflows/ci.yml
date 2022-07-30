@@ -3,9 +3,14 @@ on:
     branches:
     - master
 
+permissions:
+  contents: read
+  pull-requests: write
+
 jobs:
   triage:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
       - uses: mschilde/auto-label-merge-conflicts@master
         with:

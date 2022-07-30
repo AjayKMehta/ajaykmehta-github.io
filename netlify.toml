@@ -1,20 +1,45 @@
-# https://alison.rbind.io/post/2019-02-19-hugo-netlify-toml/
+# https://docs.netlify.com/configure-builds/file-based-configuration/
 [build]
   publish = "public"
   command = "hugo"
 [build.environment]
-  HUGO_VERSION = "0.80.0"
+  HUGO_VERSION = "0.84.1"
 
+# If skip_processing = true, all other settings are ignored
+[build.processing]
+  skip_processing = false
+
+[build.processing.css]
+  bundle = true
+  minify = false
+
+[build.processing.js]
+  bundle = true
+  minify = false
+
+[build.processing.html]
+  pretty_urls = true
+
+[build.processing.images]
+  compress = true
+
+# Production context: all deploys from the Production branch (master) will
+# inherit these settings.
 [context.production.environment]
   HUGO_ENV = "production"
   HUGO_ENABLEGITINFO = "true"
 
+# All deploys from dev branch will inherit these settings.
 [context.dev]
   command = "hugo -D -F -b $DEPLOY_PRIME_URL"
 
+# Branch Deploy context: all deploys that are not from a pull/merge request or
+# from the Production branch will inherit these settings.
 [context.branch-deploy]
   command = "hugo -D -b $DEPLOY_PRIME_URL"
 
+# Deploy Preview context: all deploys generated from a pull/merge request will
+# inherit these settings.
 [context.deploy-preview]
   command = "hugo -F -b $DEPLOY_PRIME_URL"
 

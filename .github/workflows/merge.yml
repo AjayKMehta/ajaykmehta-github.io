@@ -1,13 +1,22 @@
+# Try merging a pull request when it is approved.
 name: merge pull-request
 on:
-    pull_request
+    pull_request_review:
+        types:
+            - submitted
+
+permissions:
+    contents: read
+    pull-requests: write
 
 jobs:
-    merge:
+    automerge:
+        if: github.event.review.state == 'approved' || !github.event.review
         runs-on: ubuntu-latest
+        timeout-minutes: 5
         steps:
             - name: merge pull request
-              uses: sudo-bot/action-pull-request-merge@v1.1.1
+              uses: sudo-bot/action-pull-request-merge@v1.2.0
               with:
                   github-token: ${{ secrets.GITHUB_TOKEN }}
                   number: ${{ github.event.pull_request.number }}

@@ -45,3 +45,10 @@ Thumbs.db
 ideas.txt
 
 content/**/index.html
+# NEW in Hugo 0.89
+.hugo_build.lock
+
+# Local Netlify folder
+.netlify
+
+.vscode

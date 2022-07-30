@@ -25,6 +25,8 @@
 
 # Web
 *.css text diff=css
+*.scss text diff=css
+*.sass text
 *.htm text diff=html
 *.html text diff=html
 *.md text diff=markdown
@@ -43,9 +45,6 @@
 *.psd filter=lfs diff=lfs merge=lfs -text
 *.webp filter=lfs diff=lfs merge=lfs -text
 *.svg text
-# If you want to treat it as binary,
-# use the following line instead.
-# *.svg binary
 
 # Archives
 *.7z filter=lfs diff=lfs merge=lfs -text
