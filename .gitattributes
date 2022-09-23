@@ -29,7 +29,7 @@
 *.sass text
 *.htm text diff=html
 *.html text diff=html
-*.md text diff=markdown
+*.md text diff=markdown linguist-detectable
 
 # Data
 *.csv filter=lfs diff=lfs merge=lfs
