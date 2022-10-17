@@ -14,4 +14,14 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
+    labels:
+      - ":arrow_up: dependencies"
+    target-branch: "dev"
+
+  - package-ecosystem: "gitsubmodule"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    labels:
+      - ":arrow_up: dependencies"
     target-branch: "dev"
