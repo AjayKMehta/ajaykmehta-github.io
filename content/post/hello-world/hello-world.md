@@ -6,6 +6,9 @@ draft: true
 date: 2020-01-08T20:31:04-08:00
 categories: ["testing"]
 tags: []
+# https://gohugo.io/content-management/urls/#aliases
+aliases:
+    - /posts/hello-world/
 ---
 
 This post is to test various features of Hugo.
@@ -18,6 +21,7 @@ This is a test[^1].
 
 ### Haskell
 
+<!-- <https://gohugo.io/content-management/syntax-highlighting/#highlight-shortcode> -->
 {{< highlight haskell "linenos=table, hl_lines=1 3-4" >}}
 m >>= f
 
@@ -43,7 +47,7 @@ import pandas as pd
 
 ### R
 
-```r {hl_lines = [1, 3]}
+```r {linenos=table, hl_lines=[1, 3]}
 iris %>%
 group_by(Species) %>%
 summarize(
@@ -67,7 +71,7 @@ Get-Module -ListAvailable |
 `\tag{1}`  does not work unless you do this:
 
 ```text
-`$$\tag{1}\alpha = \frac{1}{3}$$`
+$$\tag{1}\alpha = \frac{1}{3}$$
 ```
 
 `$$\tag{1}\alpha = \frac{1}{3}$$`
