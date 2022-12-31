@@ -17,6 +17,7 @@ enableInlineShortcodes = true
 footnoteReturnLinkContents = "↩"
 metaDataFormat = "yaml"
 copyright = '© Ajay Mehta (2022)'
+timeZone = 'America/Los_Angeles'
 
 [imaging]
   resampleFilter = "lanczos"
@@ -69,23 +70,21 @@ copyright = '© Ajay Mehta (2022)'
 [[menu.main]]
     identifier = "about"
     name = "About"
-    pre = "<span class='glyphicon glyphicon-info-sign fa-2x'></span>"
+    pre = "<i class='fas fa-info-circle fa-2x'></i>"
     url = "about/"
     weight = -100
 
 [[menu.main]]
     name = "Tags"
-    pre = "<span class='glyphicon glyphicon-tags fa-2x'></span>"
+    pre = "<i class='fas fa-tags fa-2x'></i>"
     url = "tags"
     weight = 3
 
 [[menu.main]]
     name = "Categories"
-    # pre = "<span style='font-size: 20px' class='glyphicon glyphicon-th-list'></span>"
-    pre = "<span class='glyphicon glyphicon-th-list fa-2x'></span>"
+    pre = "<i class='fas fa-th-list fa-2x'></i>"
     url = "categories"
     weight = 4
-
 
 #################################
 ## Theme-specific settings     ##
