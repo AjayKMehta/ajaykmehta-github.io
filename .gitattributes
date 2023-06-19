@@ -32,7 +32,7 @@
 *.md text diff=markdown linguist-detectable
 
 # Data
-*.csv filter=lfs diff=lfs merge=lfs
+*.csv eol=crlf filter=lfs diff=lfs merge=lfs
 *.xls* filter=lfs diff=lfs merge=lfs
 *.hdf5 filter=lfs diff=lfs merge=lfs -text
 
