@@ -48,3 +48,6 @@
   for = "/*"
   [headers.values]
     Access-Control-Allow-Origin = "*"
+	# https://github.com/coatless/quarto-webr
+    Cross-Origin-Opener-Policy = "same-origin"
+    Cross-Origin-Embedder-Policy = "require-corp"
