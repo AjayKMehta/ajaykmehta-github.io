@@ -3,7 +3,7 @@
   publish = "public"
   command = "hugo"
 [build.environment]
-  HUGO_VERSION = "0.110.0"
+  HUGO_VERSION = "0.114.0"
 
 # If skip_processing = true, all other settings are ignored
 [build.processing]
