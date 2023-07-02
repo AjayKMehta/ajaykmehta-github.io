@@ -36,8 +36,6 @@ if (!("theme" %in% names(params)) || nchar(params$theme) == 0) {
     class.error = "bg-danger text-danger"
   )
 }
-
-library(flair)
 ```
 
 # Section heading in sentence case
@@ -71,11 +69,6 @@ a <- 1
 
 This is a test: $\overset{f(a)}{a \in \mathbb{R}}$
 
-
-```{r flair-ex, echo = FALSE, warning=FALSE}
-decorate("test") %>%
-  flair("<-")
-```
 
 $$\begin{align}
 y_t & = l_{t-1} + \phi{b_{t-1}} + \epsilon_t \\
