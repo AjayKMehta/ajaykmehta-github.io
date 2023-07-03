@@ -134,3 +134,13 @@ The year `{{`**`< year >`**`}}` is `{{< year >}}`.
 ## Markdown attributes {.text-serif #a-heading title="Hovered"}
 
 Hugo 0.81 introduced attribute lists on markdown blocks like lists, tables etc in which the element's attributes would be defined in curly braces.
+
+## Mermaid
+
+{{<mermaid align="left">}}
+graph LR;
+A[Hard edge] -->|Link text| B(Round edge)
+B --> C{Decision}
+C -->|One| D[Result one]
+C -->|Two| E[Result two]
+{{< /mermaid >}}
