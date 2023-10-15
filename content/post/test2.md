@@ -22,7 +22,10 @@ editor_options:
 This is a R Markdown template for a blog post.
 
 <!-- https://gohugo.io/content-management/summaries/ -->
+
 <!--more-->
+
+
 
 # Section heading in sentence case
 
@@ -32,7 +35,8 @@ Citation of a website[^1].
 
 A plot:
 
-``` r
+
+```r
 plot(1:10)
 ```
 
@@ -40,19 +44,32 @@ plot(1:10)
 
 Code chunk:
 
-``` r
+
+```r
 library(tidyverse)
+```
+
+```{.bg-warning .text-warning}
+## Warning: package 'lubridate' was built under R version 4.3.1
+```
+
+```r
 rnorm(10) %>% sum()
 ```
 
-``` bg-success
-## [1] -2.041044
+```{.bg-success}
+## [1] 5.078321
 ```
+
+
 
 This is a test: `\(\overset{f(a)}{a \in \mathbb{R}}\)`
 
-<pre><code class='language-r'><code>a <span style="background-color:#ffff7f"><-</span> 1<br>a <span style="background-color:#ffff7f"><-</span> 1<br>a <span style="background-color:#ffff7f"><-</span> 1<br>a <span style="background-color:#ffff7f"><-</span> 1<br>a <span style="background-color:#ffff7f"><-</span> 1<br>a <span style="background-color:#ffff7f"><-</span> 1<br>a <span style="background-color:#ffff7f"><-</span> 1</code></code></pre>
 
-`$$\begin{align} y_t & = l_{t-1} + \phi{b_{t-1}} + \epsilon_t \\ l_t & = l_{t-1} + \phi{b_{t-1}} + \alpha\epsilon_t \\ b_t & = \phi{b_{t-1}} + \beta\epsilon_t \end{align}$$`
+`$$\begin{align}
+y_t & = l_{t-1} + \phi{b_{t-1}} + \epsilon_t \\
+l_t & = l_{t-1} + \phi{b_{t-1}} + \alpha\epsilon_t \\
+b_t & = \phi{b_{t-1}} + \beta\epsilon_t
+\end{align}$$`
 
-[^1]: Hugo static site generator. <https://gohugo.io/>
+[^1]: Hugo static site generator. https://gohugo.io/

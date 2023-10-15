@@ -144,3 +144,16 @@ B --> C{Decision}
 C -->|One| D[Result one]
 C -->|Two| E[Result two]
 {{< /mermaid >}}
+
+Git graph doesn't render:
+
+{{<mermaid>}}
+gitGraph
+    commit id: "3aa7786"
+    branch origin/main
+    commit id: "ec38060 Address linter warnings."
+    commit id: "3ff098e Add packages."
+    checkout main
+    commit id: "12301"
+    merge origin/main
+{{</mermaid>}}
