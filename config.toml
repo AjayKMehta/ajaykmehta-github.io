@@ -10,33 +10,49 @@ theme = "beautifulhugo"
 enableEmoji = true
 googleAnalytics = ""
 # https://cran.r-project.org/web/packages/blogdown/news/news.html
-ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_cache$", "index\\.html", "\\.knit\\.md$", "\\.utf8\\.md$", "scripts"]
+ignoreFiles = [
+    "\\.Rmd$",
+    "\\.Rmarkdown$",
+    "_cache$",
+    "index\\.html",
+    "\\.knit\\.md$",
+    "\\.utf8\\.md$",
+    "scripts",
+]
 enableGitInfo = true
 # https://gohugo.io/templates/shortcode-templates/#inline-shortcodes
 enableInlineShortcodes = true
 footnoteReturnLinkContents = "↩"
 metaDataFormat = "yaml"
-copyright = '© Ajay Mehta (2022)'
+copyright = '© Ajay Mehta (2024)'
 
 [imaging]
-  resampleFilter = "lanczos"
-  quality = 90
-  anchor = "smart"  # Anchor for cropping. Options include Smart and Center.
+    resampleFilter = "lanczos"
+    quality = 90
+    anchor = "smart"           # Anchor for cropping. Options include Smart and Center.
 
 [markup]
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      hardWraps = false
-      # Render inline HTML + JS
-      unsafe = true
-      xhtml = false
-  [markup.highlight]
+    [markup.goldmark]
+        [markup.goldmark.renderer]
+            hardWraps = false
+            # Render inline HTML + JS
+            unsafe = true
+            xhtml = false
+        # https://gohugo.io/content-management/mathematics/#setup
+        [markup.goldmark.extensions]
+            [markup.goldmark.extensions.passthrough]
+                enable = true
+                [markup.goldmark.extensions.passthrough.delimiters]
+                    block = [['\[', '\]'], ['$$', '$$']]
+                    inline = [['\(', '\)']]
+[markup.highlight]
     # https://xyproto.github.io/splash/docs/longer/index.html
     style = "dracula"
-  [markup.tableOfContents]
+[markup.tableOfContents]
     endLevel = 3
     ordered = false
     startLevel = 2
+
 
 [privacy]
     [privacy.disqus]
@@ -63,39 +79,40 @@ copyright = '© Ajay Mehta (2022)'
 
 [menu]
 
-[[menu.main]]
-    identifier = "about"
-    name = "About"
-    pre = "<span class='glyphicon glyphicon-info-sign fa-2x'></span>"
-    url = "about/"
-    weight = -100
+    [[menu.main]]
+        identifier = "about"
+        name = "About"
+        pre = "<span class='glyphicon glyphicon-info-sign fa-2x'></span>"
+        url = "about/"
+        weight = -100
 
-[[menu.main]]
-    name = "Tags"
-    pre = "<span class='glyphicon glyphicon-tags fa-2x'></span>"
-    url = "tags"
-    weight = 3
+    [[menu.main]]
+        name = "Tags"
+        pre = "<span class='glyphicon glyphicon-tags fa-2x'></span>"
+        url = "tags"
+        weight = 3
 
-[[menu.main]]
-    name = "Categories"
-    # pre = "<span style='font-size: 20px' class='glyphicon glyphicon-th-list'></span>"
-    pre = "<span class='glyphicon glyphicon-th-list fa-2x'></span>"
-    url = "categories"
-    weight = 4
+    [[menu.main]]
+        name = "Categories"
+        # pre = "<span style='font-size: 20px' class='glyphicon glyphicon-th-list'></span>"
+        pre = "<span class='glyphicon glyphicon-th-list fa-2x'></span>"
+        url = "categories"
+        weight = 4
 
 
-#################################
-## Theme-specific settings     ##
-#################################
+        #################################
+        ## Theme-specific settings     ##
+        #################################
 
-#################
-# beautifulhugo #
-#################
+        #################
+        # beautifulhugo #
+        #################
 
 [params]
-    homeTitle = "" # Set a different text for the header on the home page
+    homeTitle = ""                                  # Set a different text for the header on the home page
     description = "Personal website of Ajay Mehta."
     useHLJS = false
+    math = true
     MathJaxCDN = "//cdnjs.cloudflare.com/ajax/libs"
     MathJaxVersion = "3.2.1"
 
@@ -115,11 +132,12 @@ copyright = '© Ajay Mehta (2022)'
     repo = "ajaykmehta/blog"
     # dark-blue,github-dark-orange,github-dark,github-light,icy-dark,photon-dark
     commentsTheme = "github-light"
+    mainSections = ["post", "posts"]
 
-[Author]
-    name = "Ajay Mehta"
-    # website = "https://ajaymehta.netlify.com"
-    github = "ajaykmehta"
-    gitlab = "ajaymehta1"
-    linkedin = "ajay-mehta-b781ba1"
-    # stackoverflow = ""
+    [params.author]
+        name = "Ajay Mehta"
+        # website = "https://ajaymehta.netlify.com"
+        github = "ajaykmehta"
+        gitlab = "ajaymehta1"
+        linkedin = "ajay-mehta-b781ba1"
+        # stackoverflow = ""
