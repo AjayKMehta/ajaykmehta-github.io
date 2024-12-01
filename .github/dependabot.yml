@@ -1,17 +1,28 @@
 version: 2
 updates:
-  # Maintain dependencies for GitHub Actions
   - package-ecosystem: "github-actions"
+    open-pull-requests-limit: 2
+    # For GitHub Actions, you do not need to set the directory to
+    # /.github/workflows. Configuring the key to / automatically instructs
+    # Dependabot to search the /.github/workflows directory, as well as the
+    # action.yml / action.yaml file from the root directory.
     directory: "/"
     schedule:
-      interval: "daily"
+      interval: "monthly"
+    groups:
+      actions-dependencies:
+        update-types:
+          - "minor"
+          - "patch"
     labels:
-      - ":arrow_up: dependencies"
+      - "⬆️ Dependencies"
     target-branch: "dev"
 
   # Maintain dependencies for npm
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
-      interval: "daily"
+      interval: "weekly"
     target-branch: "dev"
+    labels:
+      - "⬆️ Dependencies"
